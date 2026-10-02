@@ -1,0 +1,14 @@
+{
+  "env": {
+    "ANTHROPIC_BASE_URL": "https://tokenharbor.ai",
+    "ANTHROPIC_MODEL": "th-orchestra"
+  },
+  "permissions": {
+    "defaultMode": "dontAsk"
+  },
+  "enabledPlugins": {
+    "antislop@anti-slop": true
+  },
+  "theme": "dark-ansi",
+  "model": "th-orchestra"
+}

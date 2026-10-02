@@ -1,0 +1,11 @@
+{
+  "model": "Gemini 3.7 Flash (High)",
+  "toolPermission": "always-proceed",
+  "trustedWorkspaces": [
+    "/root",
+    "/workspace"
+  ],
+  "enablePlugins": true,
+  "enableBuiltinSkills": true,
+  "autoApprove": true
+}
