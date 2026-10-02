@@ -42,8 +42,19 @@ ai-tools/
 │   ├── playwright/             # Playwright Browser Automation (25 Tools Lengkap)
 │   └── configs/                # Template Konfigurasi MCP (Claude, AGY, Cursor)
 ├── rules/                      # System Rules & Anti-AI Slop Guidelines
+├── scripts/                    # Web Hosting & Zero-Config Tunnel Utilities (serve-html, tunnel)
 └── configs/                    # Template Konfigurasi Agen AI (AGY, Claude, OpenCode, Aider)
 ```
+
+---
+
+## 🌐 Web Hosting & Zero-Config Tunneling (Untuk AI & VPS Tanpa IP Publik)
+
+AI Coding Agent dapat langsung menjalankan, menguji, dan membagikan preview HTML / Web Apps secara instan ke publik tanpa memerlukan IP Publik terbuka atau akun Cloudflare:
+
+* **`serve-html [folder] [port]`**: Menjalankan web server lokal + Cloudflare Quick Tunnel otomatis (`https://xxxx.trycloudflare.com`).
+* **`tunnel <port>`**: Membuka akses publik HTTPS instan untuk port lokal apapun (Node.js, Flask, FastAPI, React, Next.js).
+* **AI Rule**: `rules/web-hosting-and-tunneling.md` (Menginstruksikan AI agar otomatis menjalankan `serve-html` saat user meminta preview web di lingkungan headless/VPS).
 
 ---
 
