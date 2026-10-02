@@ -83,7 +83,10 @@ fi
 if [ -d "${SCRIPT_DIR}/scripts" ]; then
   cp -f "${SCRIPT_DIR}/scripts/serve-html" "${BIN_DIR}/serve-html" 2>/dev/null || true
   cp -f "${SCRIPT_DIR}/scripts/tunnel" "${BIN_DIR}/tunnel" 2>/dev/null || true
-  chmod +x "${BIN_DIR}/serve-html" "${BIN_DIR}/tunnel" 2>/dev/null || true
+  cp -f "${SCRIPT_DIR}/scripts/ai-sync" "${BIN_DIR}/ai-sync" 2>/dev/null || true
+  chmod +x "${BIN_DIR}/serve-html" "${BIN_DIR}/tunnel" "${BIN_DIR}/ai-sync" 2>/dev/null || true
+  ln -sf "${BIN_DIR}/ai-sync" "${BIN_DIR}/ai-backup" 2>/dev/null || true
+  ln -sf "${BIN_DIR}/ai-sync" "${BIN_DIR}/ai-restore" 2>/dev/null || true
 fi
 
 if ! command -v cloudflared &>/dev/null; then
